@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+body {
+    background-color: #ffd7eb;
+}
+
+#btn-image {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+#btn-image .envelope {
+    width: 220px;
+    height: auto;
+}
+
+#btn-image img {
+    width: 150px;
+    height: auto;
+}
+
+#btn-image img:hover {
+    transform: scale(1.1);
+}
+
+#titles {   
+    display: flex;
+    justify-content: center;
+    gap: 95px;
+    margin-top: -30px;
+}
+
+.h2 {
+    font-family: 'Jersey 15';
+    font-size: 40px;
+}

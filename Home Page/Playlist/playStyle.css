@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #ffd7eb;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #ff71b8;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 0;
+}
+
+.toggleSidebarBtn {
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    margin-right: 500px;
+}
+
+#sidebarToggle {
+    background-color: #fc5bab;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jersey 15';
+    padding: 25px 25px;
+    margin: 0 auto;
+}
+
+#sidebarToggle:hover {
+background-color: #fe97cb;
+}
+
+#closeSidebar {
+    background-color: #fc5bab;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    font-size: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jersey 15';
+    padding: 25px 25px;
+    margin: 0 auto;
+}
+
+#closeSidebar:hover {
+    background-color: #fe97cb;
+}
+
+.sidebar {
+    height: 89%;
+    width: 250px;
+    position: fixed;
+    top: 90px;
+    right: -250px;
+    background-color: #111;
+    color: white;
+    align-items: center;
+    overflow-y: auto;
+    transition: 0.5s;
+    padding-top: 20px;
+    font-family: 'Poppins';
+    z-index: 5;
+    scrollbar-width: none;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #575757;
+}
+
+.sidebar ul li img {
+    width: 40px;
+}
+
+.title {
+    font-family: 'Jersey 15';
+    font-size: 50px;
+    color: #000;
+    margin: 0 auto;
+    flex-grow: 1;
+    text-align: center; 
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.homeBtn {
+    background-color: #fc5bab;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jersey 15';
+    padding: 25px 25px;
+}
+
+.homeBtn:hover {
+    background-color: #fe97cb;
+}
+
+#Player {
+    align-items: center;
+    max-width: 100%;
+    height: 10px;
+}
+
+@media (min-width: 1024px) {
+    .CDPlayer img {
+        display: block;
+        width: 280px;
+        height: 350px;
+        margin-left: 47%;
+        margin-top: 60px;
+        z-index: 1;
+        position: relative; 
+    }
+    
+    .CD-Handle-Play img, .CD-Handle-Pause img {
+        display: block;
+        position: absolute;
+        z-index: 2; 
+    }
+    
+    .CD-Handle-Play img {
+        width: 125px;
+        height: 260px;
+        margin-top: -370px;
+        margin-left: 62%;
+    }
+    
+    .CD-Handle-Pause img {
+        width: 260px;
+        height: 300px;
+        margin-top: -400px;
+        margin-left: 60%;
+    }
+    
+    .cd.spin {
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+       
+      .details {
+        display: column;
+        align-items: center;
+        flex-direction: row; 
+        justify-content: center;
+        margin-top: 25px;
+        margin-left: 20px;
+        width: 100%;
+      }
+    
+    .track-art {
+        margin-left: 550px;
+        margin-top: -11px;
+        height: 300px;
+        width: 300px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 2%;
+        border: 2px solid #000;
+        box-shadow: 0px 0px 10px rgba(0.5, 0.5, 0.5, 0.5);
+    }
+    
+    .track-info {
+        margin-top: 20px;
+        margin-left: 550px; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .now-playing {
+        display: none;
+    }
+    
+    .track-name {
+        font-size: 1.5rem;
+        font-family: 'Poppins';
+        font-weight: bold;
+    }
+    
+    .track-artist {
+        font-size: 1rem;
+        font-family: 'Poppins';
+    }
+
+    .current-time {
+        font-family: 'Poppins';
+    }
+    
+    .total-duration {
+        font-family: 'Poppins';
+    }
+
+    .Navigation {
+        display: column;
+        align-items: center;
+        margin-top: -20px;
+        margin-left: 220px;
+        margin-right: 50px;
+        margin-bottom: 5px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: -30px;
+        margin-left: -120px;
+        /* margin-right: 100px; */
+    }
+
+    .playpause-track,
+    .prev-track,
+    .next-track {
+        padding: 25px;
+        opacity: 0.8;
+        transition: opacity .2s; 
+    }
+
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+        opacity: 1.0; 
+    }
+
+    .time_container {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 300px;
+        margin-top: 10px;
+    }
+
+    .volume_container {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 370px;
+        margin-top: -30px;
+    }
+
+    .seek_slider, .volume_slider {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 5px;
+        background: black;
+        opacity: 0.7;
+        transition: opacity .2s; 
+    }
+
+    .seek_slider:hover, .volume_slider:hover {
+        opacity: 1.0; 
+    }
+
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: white;
+        cursor: pointer;
+        border-radius: 50%; 
+    }
+
+    .seek_slider {
+        width: 400px;
+    }
+
+    .volume_slider {
+        width: 200px;
+    }
+
+    .current-time, .total-duration {
+        padding: 20px;
+    }
+
+    i.fa-volume-down, i.fa-volume-up {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .CDPlayer img {
+        display: block;
+        width: 245px;
+        height: 300px;
+        margin-left: 370px;
+        margin-top: 100px;
+        z-index: 3;
+        position: relative; 
+    }
+    
+    .CD-Handle-Play img, .CD-Handle-Pause img {
+        display: block;
+        position: absolute;
+        z-index: 3; 
+    }
+    
+    .CD-Handle-Play img {
+        width: 120px;
+        height: 250px;
+        margin-top: -334px;
+        margin-left: 559px;
+    }
+    
+    .CD-Handle-Pause img {
+        width: 250px;
+        height: 290px;
+        margin-top: -360px;
+        margin-left: 560px;
+    }
+    
+    .cd.spin {
+        animation: spin 2s linear infinite;
+    }
+    
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .track-art {
+        display: block;
+        margin-left: 220px;
+        margin-top: -13px;
+        height: 250px;
+        width: 250px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 2%;
+        border: 2px solid #000;
+        box-shadow: 0px 0px 10px rgba(0.5, 0.5, 0.5, 0.5);
+        z-index: 2;
+    }
+
+    .track-info {
+        margin-top: 20px;
+        margin-left: 220px; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 2;
+    }
+
+    .now-playing {
+        display: none;
+    }
+    
+    .track-name {
+        font-size: 1.5rem;
+        font-family: 'Poppins';
+        font-weight: bold;
+    }
+    
+    .track-artist {
+        font-size: 1rem;
+        font-family: 'Poppins';
+    }
+
+    .details {
+        display: column;
+        align-items: center;
+        flex-direction: row; 
+        justify-content: center;
+        margin-top: 25px;
+        margin-left: 20px;
+        width: 100%;
+        z-index: 1;
+      }
+    
+    .Navigation {
+        display: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 220px;
+        margin-right: 50px;
+        margin-bottom: 5px;
+    }
+    
+    .current-time {
+        font-family: 'Poppins';
+    }
+    
+    .total-duration {
+        font-family: 'Poppins';
+    }    
+    
+    .time_container {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -60px;
+        margin-right: -10px;
+        margin-bottom: -25px;
+        margin-top: -20px;
+        z-index: 4;
+    }
+
+    .volume_container {
+        width: 100%;
+        max-width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -35px;
+        margin-left: 40px;
+        z-index: 3;
+    }
+
+    .seek_slider, .volume_slider {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 5px;
+        background: black;
+        opacity: 0.7;
+        transition: opacity .2s; 
+    }
+
+    .seek_slider:hover, .volume_slider:hover {
+        opacity: 1.0; 
+    }
+
+    .seek_slider::-webkit-slider-thumb,
+    .volume_slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background: white;
+        cursor: pointer;
+        border-radius: 50%; 
+    }
+
+    .seek_slider {
+        width: 400px;
+    }
+
+    .volume_slider {
+        width: 200px;
+    }
+
+    .current-time, .total-duration {
+        padding: 20px;
+    }
+
+    i.fa-volume-down, i.fa-volume-up {
+        padding: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-left: -100px;
+        z-index: 2;
+    }
+
+    .playpause-track,
+    .prev-track,
+    .next-track {
+        padding: 25px;
+        opacity: 0.8;
+        transition: opacity .2s; 
+    }
+
+    .playpause-track:hover,
+    .prev-track:hover,
+    .next-track:hover {
+        opacity: 1.0; 
+    }
+}
+    i.fa-play-circle,
+    i.fa-pause-circle,
+    i.fa-step-forward,
+    i.fa-step-backward {
+      cursor: pointer;
+    }

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+body {
+    background-color: #ffd7eb;
+    overflow: hidden;
+}
+
+#container {
+    margin-top: 250px;
+    text-align: center; 
+}
+
+.h2 {
+    display: inline-block; 
+    font-family: 'Jersey 15';
+    font-size: 30px;
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typing 3s steps(30, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.h1 {
+    font-family: 'Luxurious Script';
+    font-size: 70px;
+    margin-top: 10px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1; 
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}

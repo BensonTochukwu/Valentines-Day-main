@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+body {
+    background-color: #ffd7eb;
+}
+
+.text-center {
+    text-align: center;
+    font-family: 'Jersey 15';
+    font-size: 2.2em;
+    margin-top: 150px;
+}
+
+.container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border: none;
+    width: 300px;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+}
+.card-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card-header input[type="password"] {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.pinpad-btn {
+    width: 75px;              
+    height: 50px;            
+    margin: 5px;              
+    padding: 5px;            
+    border: 2px solid black;  
+    border-radius: 5px;     
+    font-size: 2em;         
+    display: flex;           
+    justify-content: center;  
+    align-items: center;      
+    cursor: pointer;          
+    background-color: #f5dbcb; 
+    transition: background-color 0.3s; 
+    font-family: 'Jersey 15';
+
+}
+
+.pinpad-btn:hover{
+    background-color: #ffcfb2;
+}
+
+#pinpad-input-1, #pinpad-input-2, #pinpad-input-3, #pinpad-input-4 {
+    border-radius: 10px;
+    border: 3px solid black;
+    height: 45px;
+    font-size: 1.5em;
+    text-align: center;
+    width: 45px;
+    background-color: #ff71b8;
+    display: inline-block;
+}

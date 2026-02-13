@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+body {
+    background-color: #ffd7eb;
+}
+
+.header {
+    background-color: #ff71b8;
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.title {
+    font-family: 'Jersey 15';
+    font-size: 50px;
+    color: #000;
+    margin: 0 auto;
+    flex-grow: 1;
+    text-align: center; 
+}
+
+#notebook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative; 
+    overflow: hidden;
+}
+
+#notebook img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.media-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+/* Collage */
+.photo-collage {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.photo-collage img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    padding: 16px;           /* 👈 adds inner spacing */
+}
+
+
+/* Portrait video */
+.portrait-video {
+    width: 100%;
+    max-width: 320px;      /* phone-like width */
+    aspect-ratio: 9 / 16; /* portrait */
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Center it */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+@media (min-width: 1024px) {
+    #notebook img {
+        width: 1300px;
+        height: 550px;
+    }
+    #contents {
+        position: absolute;
+        top: 10%; /* Adjust as needed to place the text */
+        left: 5%; /* Adjust as needed to place the text */
+        width: 70%; /* Adjust width based on the notebook */
+        height: 110%; /* Adjust height based on the notebook */
+        display: flex; /* Use Flexbox for layout */
+        justify-content: space-between; /* Distribute space between contents1 and contents2 */
+        gap: 5px;
+        }
+    
+        #contents1,
+        #contents2,
+        #contents3,
+        #contents4 {
+            width: 36%; /* Adjust width to fit within the container */
+            height: 100%;
+            padding: 10px 10px;
+        }
+    
+        .page-left1, .page-right1, .page-left2, .page-right2 {
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Birthstone';
+            font-size: 30px; 
+            color: #140a0a;
+            margin-left: 60px; 
+            margin-right: 45px;
+            text-shadow: 
+                -1px -1px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                -1px -1px 0 #ffffff,
+                1px 1px 0 #ffffff;
+        }
+    
+        .images-left1 img, .images-right1 img, .images-left2 img, .images-right2 img {
+            width: 100%;
+            height: 150%;
+            object-fit: cover;
+        }
+    
+        .titleP1, .titleP2, .titleP3, .titleP4 {
+            position: absolute;
+            transform: rotate(-20deg);
+            margin-left: 160px;
+            z-index: 1;
+        }
+    
+        .images-left1, .images-left2 {
+            display: grid;
+            justify-items: center;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            width: 100%; /* Adjust width to fit within the container */
+            height: auto; /* Adjust height based on content */
+            grid-auto-rows: 100px;
+            padding: 3px;
+            box-sizing: border-box;
+            margin-top: -120px;
+            margin-left: 170px; 
+        }
+
+        /* .background-image-left1, .background-image-left2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 70%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .bgl1 {  
+            background-image: url(./Images/Craftinng.jpg);
+            background-position: 30px 100px;
+            margin-left: 300px;
+            margin-top: -110px;
+        }
+
+        .bgl2 {
+            background-image: url(./Images/drawing.jpg);
+            background-position: 10px 100px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+
+        .bgl3 {
+            background-image: url(./Images/travel.jpg);
+            background-position: 10px 100px;
+            margin-left: 232px;
+            margin-top: -100px;
+        }
+
+        .bgl2-1 {  
+            background-image: url(./Images/Craftinng.jpg);
+            background-position: 30px 100px;
+            margin-left: 300px;
+            margin-top: -110px;
+        }
+
+        .bgl2-2 {
+            background-image: url(./Images/drawing.jpg);
+            background-position: 10px 100px;
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+
+        .bgl2-3 {
+            background-image: url(./Images/travel.jpg);
+            background-position: 10px 100px;
+            margin-left: 232px;
+            margin-top: -100px;
+        } */
+    
+        .images-right1, .images-right2 {
+            display: grid;
+            justify-items: center;
+            grid-gap: 6px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            width: 100%; 
+            height: auto; 
+            grid-auto-rows: 100px;
+            padding: 1px;
+            margin-left: 124px;
+            box-sizing: border-box;
+            margin-top: -90px;
+        }
+
+        /* .background-image-right1, .background-image-right2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 70%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .bgr1 {  
+            background-image: url(./Images/Interior.jpg);
+            background-position: 100px -30px;
+            margin-left: 815px;
+        }
+
+        .bgr2 {
+            background-image: url(./Images/drawing.jpg);
+            background-position: 10px 100px;
+            margin-left: 741px;
+            margin-top: 23px;
+        }
+
+        .bgr3 {
+            background-image: url(./Images/Craftinng.jpg);
+            background-position: 10px 100px;
+            margin-top: -115px;
+            margin-left: 741px;
+        }
+
+        .bgr2-1 {  
+            background-image: url(./Images/Interior.jpg);
+            background-position: 100px -30px;
+            margin-left: 815px;
+        }
+
+        .bgr2-2 {
+            background-image: url(./Images/drawing.jpg);
+            background-position: 10px 100px;
+            margin-left: 741px;
+            margin-top: 23px;
+        }
+
+        .bgr2-3 {
+            background-image: url(./Images/Craftinng.jpg);
+            background-position: 10px 100px;
+            margin-top: -115px;
+            margin-left: 741px;
+        } */
+}
+
+@media (max-width: 1023px) {
+    #notebook img {
+        top: 50%;
+        width: 700px;
+        height: 500px;
+        margin: 0 auto;
+    }
+
+    #contents {
+    position: absolute;
+    top: 10%; /* Adjust as needed to place the text */
+    left: 5%; /* Adjust as needed to place the text */
+    width: 90%; /* Adjust width based on the notebook */
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Distribute space between contents1 and contents2 */
+    }
+
+    #contents1, #contents2, #contents3, #contents4 {
+        width: 41%;
+        padding: 10px 10px;
+    }
+
+    .page-left1, .page-right1, .page-left2, .page-right2 {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        font-family: 'Birthstone';
+        font-size: 30px; 
+        color: #140a0a;
+        margin-left: 10px;
+        text-shadow:
+            -1px -1px 0 #ffffff,
+            -1px -1px 0 #ffffff,
+            -1px -1px 0 #ffffff,
+            1px 1px 0 #ffffff;
+    }
+
+    .images-left1 img, .images-right1 img, .images-left2 img, .images-right2 img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .titleP1, .titleP2, .titleP3, .titleP4 {
+        position: absolute;
+        white-space: nowrap;
+        transform: rotate(-20deg);
+    }
+
+    .images-left1, .images-left2 {
+        display: grid;
+        justify-items: center;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        width: 100%;
+        height: auto;
+        grid-auto-rows: 100px;
+        padding: 3px;
+        box-sizing: border-box;
+        margin-top: -120px;
+    }
+
+    .images-right1, .images-right2 {
+        display: grid;
+        justify-items: center;
+        grid-gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        width: 100%;
+        height: auto;
+        grid-auto-rows: 100px;
+        padding: 3px;
+        margin-left: -5px;
+        box-sizing: border-box;
+        margin-top: -90px;
+    }
+}
+
+/* .hidden class to hide elements */
+.hidden {
+    display: none;
+}
+
+button {
+    font-family: 'Jersey 15';
+    font-size: 60px;
+    padding: 25px 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#backBtn {
+    position: absolute;
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+#nextBtn {
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+}
+
+.hidden {
+    display: none;
+}
+
+.homeBtn {
+    background-color: #fc5bab;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 20px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBtn:hover {
+    background-color: #fe97cb;
+}
+
+@media (max-width: 1024px) {
+    .photo-collage {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .photo-collage {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-collage img {
+        height: 180px;
+        
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .photo-collage {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-collage img {
+        height: 220px;
+    }
+}
