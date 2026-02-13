@@ -25,6 +25,6 @@ toggleBtn.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function() {
     const homeButton = document.getElementById("toHomeBtn");
     homeButton.addEventListener("click", function() {
-        window.location.href = "../Home.html";
+        window.location.href = "../index.html";
     });
 });
